@@ -1,0 +1,65 @@
+/* Contenido principal */
+.content {
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Sección del logo */
+.logo-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.tagline {
+    line-height: 1.4;
+}
+
+.highlight {
+    font-weight: 500;
+}
+
+/* Sección del simulador */
+.simulator-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.simulator-button {
+    width: 180px;
+    height: 180px;
+    background: none;
+    border: 7px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.simulator-button span {
+    color: #fff;
+}
+
+/* Sección CTA */
+.cta-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cta-section p {
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 300;
+}

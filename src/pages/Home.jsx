@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavBar } from "../components/NavBar";
 import { useNavigate } from "react-router-dom";
+import "./../styles/Home.css";
 import "./../styles/global.css";
 
 export function Home() {
@@ -37,7 +38,7 @@ export function Home() {
 
                 <div className="cta-section">
                     <p>Si has probado el simulador...</p>
-                    <button className="test-button">Ponte a prueba</button>
+                    <button className="primary-button">Ponte a prueba</button>
                 </div>
             </div>
         </>

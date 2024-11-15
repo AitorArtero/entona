@@ -1,9 +1,11 @@
 import React from 'react';
 import './../styles/NavBar.css';
+import "./../styles/global.css";
 
 export function NavBar({ isOpen, onToggle }) {
     return (
         <>
+            {/* Botón del Menú */}
             <button 
                 className={`menu-button ${isOpen ? 'nav-open' : ''}`} 
                 aria-label="Menú" 
@@ -22,7 +24,11 @@ export function NavBar({ isOpen, onToggle }) {
             )}
             </button>
 
+
+
+            {/* Menú de Navegación */}
             <nav className={`navbar ${isOpen ? 'open' : ''}`}>
+                {/* Logo */}
                 <div className="nav-logo">
                     entona
                 </div>
@@ -30,8 +36,16 @@ export function NavBar({ isOpen, onToggle }) {
                     <li><a href="#home">¿Qué es entona?</a></li>
                     <li><a href="#practice">Buenas prácticas</a></li>
                     <li><a href="#gallery">Galería</a></li>
-                    <li><a href="/simulator">Entona simulator</a></li>
-                    <li><a href="/test">Ponte a prueba</a></li>
+                    <li>
+                        <a href="/simulator" className="primary-button-a">
+                            Entona simulator
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/test" className="primary-button-b">
+                            Ponte a prueba
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </>

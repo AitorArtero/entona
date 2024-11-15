@@ -1,10 +1,9 @@
-/* Estilos base del navbar - menú lateral */
+/* Navbar - menú lateral */
 .navbar {
     position: fixed;
     top: 0;
-    left: -100%;  /* MODIFICAR ESTE VALOR PARA CAMBIAR LA POSICIÓN INICIAL DEL MENÚ */
-    /* MODIFICAR ESTE WIDTH PARA CAMBIAR EL ANCHO DEL MENÚ LATERAL */
-    width: 85%;  /* Reducido de 100% a 85% para mejor aproximación al diseño */
+    left: -100%;
+    width: 85%;
     height: 100vh;
     background-color: #fff;
     transition: all 0.3s ease-in-out;
@@ -12,100 +11,83 @@
     display: flex;
     flex-direction: column;
     padding: 80px 40px;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil en el borde */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Clase que controla la apertura del menú */
 .navbar.open {
     left: 0;
 }
 
-/* Estilos de la lista de navegación */
 .navbar ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
-/* Estilos de cada elemento de la lista */
 .navbar ul li {
-    margin-bottom: 35px; /* Ajustado para coincidir mejor con el espaciado del diseño */
-    border-bottom: 1px solid #f0f0f0; /* Línea separadora sutil */
+    margin-bottom: 35px;
+    border-bottom: 1px solid #f0f0f0;
     padding-bottom: 10px;
 }
 
-/* Estilos de los enlaces */
 .navbar ul li a {
     color: #a5b4e3;
     text-decoration: none;
-    font-size: 20px; /* Ajustado al tamaño de la imagen */
+    font-size: 20px;
     font-weight: 400;
-    transition: color 0.3s ease;
-    display: block;
-    font-family: 'Quicksand', sans-serif;
-    padding: 8px 0;
+    font-weight: bold;
 }
 
-/* Efecto hover en los enlaces */
 .navbar ul li a:hover {
     color: #8494c7;
 }
 
-/* Estilo especial para botones tipo outline */
-.navbar ul li a.button-outline {
-    border: 1px solid #a5b4e3;
-    border-radius: 25px;
-    padding: 10px 20px;
-    text-align: center;
-    margin-top: 10px;
-}
-
-/* Estilo para botón sólido */
-.navbar ul li a.button-solid {
-    background-color: #a5b4e3;
-    color: white;
-    border-radius: 25px;
-    padding: 10px 20px;
-    text-align: center;
-    margin-top: 10px;
-}
-
-/* Media queries para diferentes tamaños de pantalla */
-@media (min-width: 768px) {
-    .navbar {
-        /* MODIFICAR ESTOS VALORES PARA CAMBIAR EL ANCHO EN DESKTOP */
-        width: 350px;  /* Ancho en desktop */
-        left: -350px;  /* Debe coincidir con el width para ocultarlo */
-    }
-}
-
-/* Estilos del botón de menú */
 .menu-button {
     position: fixed;
     top: 24px;
     left: 24px;
     z-index: 1100;
-    /* MODIFICAR ESTE WIDTH PARA CAMBIAR EL ANCHO DEL BOTÓN DE HAMBURGUESA */
-    width: 30px;  /* Reducido de 30px a 24px para hacerlo más delgado */
+    width: 30px;
     height: 30px;
     background: none;
     border: none;
-    cursor: pointer;
-    padding: 0;
 }
 
-/* Logo en el navbar */
 .nav-logo {
+    position: fixed;
+    top: 15px;
+    right: 100px;
+    font-size: 40px;
+    font-weight: bold;
     color: #a5b4e3;
-    font-size: 38px; /* Ajustado al tamaño de la imagen */
-    font-weight: 500;
-    margin-bottom: 50px;
+    z-index: 1100;
+}
+
+/* Botones en el menú */
+.primary-button-a {
+    background-color: #a5b4e3;
+    color: white !important;
+    padding: 12px 25px;
+    border-radius: 20px;
     text-align: center;
     font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-/* Ajustes específicos para mejor coincidencia con el diseño */
-.navbar ul li:last-child {
-    margin-top: 40px; /* Espacio extra antes del último elemento */
-    border-bottom: none; /* Elimina la línea del último elemento */
+.primary-button-a:hover {
+    background-color: #8494c7;
+}
+
+.primary-button-b {
+    background-color: white;
+    color: #a5b4e3;
+    padding: 12px 30px;
+    border: 2px solid #a5b4e3;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.primary-button-b:hover {
+    background-color: #f0f0f0;
 }
