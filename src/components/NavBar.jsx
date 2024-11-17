@@ -12,41 +12,41 @@ export function NavBar({ isOpen, onToggle }) {
                 onClick={onToggle}
             >
             {isOpen ? (
-                // Ícono de "cerrar" cuando el menú está abierto
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="#a5b4e3" className="icon">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             ) : (
-                // Ícono de "hamburguesa" cuando el menú está cerrado
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="white" className="icon">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
             )}
             </button>
 
-
-
             {/* Menú de Navegación */}
             <nav className={`navbar ${isOpen ? 'open' : ''}`}>
-                {/* Logo */}
-                <div className="nav-logo">
-                    entona
-                </div>
-                <ul>
-                    <li><a href="#home">¿Qué es entona?</a></li>
-                    <li><a href="#practice">Buenas prácticas</a></li>
-                    <li><a href="#gallery">Galería</a></li>
-                    <li>
+                <div className="navbar-content">
+                    {/* Logo */}
+                    <div className="nav-logo">
+                        entona
+                    </div>
+                    
+                    {/* Enlaces de navegación */}
+                    <ul className="nav-links">
+                        <li><a href="#home">¿Qué es entona?</a></li>
+                        <li><a href="#practice">Buenas prácticas</a></li>
+                        <li><a href="#gallery">Galería</a></li>
+                    </ul>
+
+                    {/* Botones */}
+                    <div className="nav-buttons">
                         <a href="/simulator" className="primary-button-a">
                             Entona simulator
                         </a>
-                    </li>
-                    <li>
                         <a href="/test" className="primary-button-b">
                             Ponte a prueba
                         </a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </nav>
         </>
     );

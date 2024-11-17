@@ -1,4 +1,3 @@
-/* Navbar - menú lateral */
 .navbar {
     position: fixed;
     top: 0;
@@ -8,9 +7,6 @@
     background-color: #fff;
     transition: all 0.3s ease-in-out;
     z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    padding: 80px 40px;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -18,27 +14,48 @@
     left: 0;
 }
 
-.navbar ul {
-    list-style: none;
-    padding: 0;
+.navbar-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 40px;
 }
 
-.navbar ul li {
+.nav-logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: #a5b4e3;
+    margin-bottom: 40px;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.nav-links li {
     margin-bottom: 35px;
     border-bottom: 1px solid #f0f0f0;
     padding-bottom: 10px;
 }
 
-.navbar ul li a {
+.nav-links li a {
     color: #a5b4e3;
     text-decoration: none;
     font-size: 20px;
-    font-weight: 400;
     font-weight: bold;
 }
 
-.navbar ul li a:hover {
+.nav-links li a:hover {
     color: #8494c7;
+}
+
+.nav-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
 }
 
 .menu-button {
@@ -52,16 +69,6 @@
     border: none;
 }
 
-.nav-logo {
-    position: fixed;
-    top: 15px;
-    right: 100px;
-    font-size: 40px;
-    font-weight: bold;
-    color: #a5b4e3;
-    z-index: 1100;
-}
-
 /* Botones en el menú */
 .primary-button-a {
     background-color: #a5b4e3;
@@ -71,6 +78,8 @@
     text-align: center;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: block;
 }
 
 .primary-button-a:hover {
@@ -86,6 +95,8 @@
     text-align: center;
     font-weight: bold;
     transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    display: block;
 }
 
 .primary-button-b:hover {
