@@ -1,25 +1,16 @@
 import React, { useState } from "react";
-import { NavBar } from "../components/NavBar";
 import { useNavigate } from "react-router-dom";
 import "./../styles/Home.css";
 import "./../styles/global.css";
 
 export function Home() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const navigate = useNavigate();
-
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
 
     const goToSimulator = () => {
       navigate("/simulator");
   };
 
     return (
-        <>
-            <NavBar isOpen={isMenuOpen} onToggle={toggleMenu} />
-            
             <div className="content">
                 <div className="logo-section">
                     <h1>entona</h1>
@@ -41,7 +32,6 @@ export function Home() {
                     <button className="primary-button">Ponte a prueba</button>
                 </div>
             </div>
-        </>
     );
 }
 

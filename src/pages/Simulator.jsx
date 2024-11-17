@@ -1,19 +1,13 @@
 // Simulator.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import NavBar from '../components/NavBar';
 import '../styles/Simulator.css';
 
 export function Simulator() {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [hasHeadphones, setHasHeadphones] = useState(false);
     const [hearingLevel, setHearingLevel] = useState('moderado');
     const [isRecording, setIsRecording] = useState(false);
     const navigate = useNavigate();
-
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
 
     const handleHearingLevelChange = (event) => {
         const value = parseInt(event.target.value);
@@ -35,10 +29,7 @@ export function Simulator() {
         }
     };
 
-    return (
-        <>
-            <NavBar isOpen={isMenuOpen} onToggle={toggleMenu} />
-            
+    return (            
             <div className="simulator-container">
                 {/* App title */}
                 <div className="app-title">
@@ -110,7 +101,6 @@ export function Simulator() {
                     </div>
                 </div>
             </div>
-        </>
     );
 }
 
