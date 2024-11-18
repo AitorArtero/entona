@@ -27,12 +27,14 @@ export function NavBar({ isOpen, onToggle }) {
                 <div className="navbar-content">
                     {/* Logo */}
                     <div className="nav-logo">
-                        entona
+                        <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                            entona
+                        </a>
                     </div>
                     
                     {/* Enlaces de navegación */}
                     <ul className="nav-links">
-                        <li><a href="#home">¿Qué es entona?</a></li>
+                        <li><a href="/about">¿Qué es entona?</a></li>
                         <li><a href="#practice">Buenas prácticas</a></li>
                         <li><a href="#gallery">Galería</a></li>
                     </ul>

@@ -9,16 +9,6 @@
     position: relative;
 }
 
-/* App title styles */
-.app-title {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    font-size: clamp(1rem, 4vw, 1.25rem);
-    font-weight: bold;
-    color: white;
-}
-
 /* Main title styles */
 .main-title {
     margin-top: clamp(40px, 8vh, 60px);
@@ -205,22 +195,65 @@
     }
 }
 
-/* Media queries específicas */
-@media (max-width: 360px) {
-    .headphone-toggle {
-        width: 100%;
-    }
-    
-    .toggle-button {
-        padding: 8px;
-        font-size: 0.8125rem;
-    }
-    
-    .hearing-level-labels {
-        font-size: 0.75rem;
+/* Small devices (480px and up) */
+@media (min-width: 480px) {
+    .simulator-container {
+        padding: 20px;
+        gap: 24px;
     }
 
-    .info-text-container {
-        font-size: 0.75rem;
+    .main-title {
+        margin-top: 40px;
+        font-size: 1.875rem;
+    }
+
+    .mic-button {
+        width: 150px;
+        height: 150px;
+    }
+
+    .info-text {
+        font-size: 0.875rem;
+    }
+}
+
+/* Medium devices (768px and up) */
+@media (min-width: 768px) {
+    .simulator-container {
+        padding: 30px;
+        gap: 32px;
+    }
+
+    .main-title {
+        font-size: 2.25rem;
+    }
+
+    .mic-button {
+        width: 180px;
+        height: 180px;
+    }
+
+    .headphone-toggle {
+        width: 280px;
+    }
+}
+
+/* Large devices (1024px and up) */
+@media (min-width: 1024px) {
+    .simulator-container {
+        padding: 40px;
+    }
+
+    .main-title {
+        font-size: 2.625rem;
+    }
+
+    .mic-button {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hearing-level-container {
+        width: 400px;
     }
 }

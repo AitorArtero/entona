@@ -1,13 +1,11 @@
 // Simulator.jsx
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import '../styles/Simulator.css';
 
 export function Simulator() {
     const [hasHeadphones, setHasHeadphones] = useState(false);
     const [hearingLevel, setHearingLevel] = useState('moderado');
     const [isRecording, setIsRecording] = useState(false);
-    const navigate = useNavigate();
 
     const handleHearingLevelChange = (event) => {
         const value = parseInt(event.target.value);

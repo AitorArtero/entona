@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Simulator } from './pages/Simulator';
 import Base_Template from './components/base_template';
+import AboutEntona from './pages/About';
 
 export function App() {
     return (
@@ -11,6 +12,7 @@ export function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/simulator" element={<Simulator />} />
+                    <Route path="/about" element={<AboutEntona />} />
                 </Routes>
             </Base_Template>
         </Router>
