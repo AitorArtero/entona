@@ -46,10 +46,40 @@ h1 {
     font-size: 20px;
     font-weight: bold;
     letter-spacing: 1px;
+    position: relative;
+    animation: pulse 2s infinite;
 }
 
 .simulator-button span {
     color: #fff;
+}
+
+.simulator-button::before,
+.simulator-button::after {
+    content: '';
+    position: absolute;
+    border: 1px solid rgba(255,255,255,0.8);
+    border-radius: 50%;
+    animation: ripple 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes ripple {
+    0% {
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+    }
+    100% {
+        width: 200%;
+        height: 200%;
+        opacity: 0;
+    }
 }
 
 /* Sección CTA */

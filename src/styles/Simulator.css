@@ -185,6 +185,9 @@
     flex-shrink: 0;
 }
 
+/* ANIMACIONES */
+
+
 /* Ajustes para notch y elementos del sistema */
 @supports (padding: max(0px)) {
     .simulator-container {
