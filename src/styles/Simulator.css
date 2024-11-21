@@ -84,7 +84,6 @@
     border-radius: 50%;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     border: none;
-    margin-top: -16px;
 }
 
 .hearing-level-slider::-moz-range-thumb {
@@ -186,6 +185,90 @@
 }
 
 /* ANIMACIONES */
+/* Animaciones para los tres componentes con saltitos fluidos */
+
+/* Definimos la animación del "saltito" */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Posición inicial y final */
+    }
+    50% {
+        transform: translateY(-20px); /* Salto hacia arriba */
+    }
+}
+
+/* Configuración del orden de los saltos */
+
+/* Botón de audífono (arriba) */
+.headphone-toggle {
+    animation: bounce 0.8s ease-in-out; /* Aplica el salto */
+    animation-delay: 0s; /* Sin retraso para el primero */
+    animation-fill-mode: forwards; /* Mantiene la posición al terminar */
+}
+
+/* Barra deslizante (medio) */
+.hearing-level-container {
+    animation: bounce 0.8s ease-in-out; /* Aplica el salto */
+    animation-delay: 0.4s; /* Retraso para iniciar después del anterior */
+    animation-fill-mode: forwards; /* Mantiene la posición al terminar */
+}
+
+/* Botón de micrófono (abajo) */
+.mic-button {
+    background-color: white; /* Fondo blanco */
+    border: 6px solid #7285c3; /* Azul oscuro */
+    position: relative;
+    overflow: hidden;
+    animation: bounce 0.8s ease-in-out; /* Aplica el salto */
+    animation-delay: 0.8s; /* Retraso para iniciar después del anterior */
+    animation-fill-mode: forwards; /* Mantiene la posición al terminar */
+}
+
+/* Animación de rayas diagonales en el botón del micrófono */
+
+/* Pseudoelemento para las rayas diagonales */
+.mic-button::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%; /* Comienza fuera del botón a la izquierda */
+    width: 300%; /* Asegura que el gradiente cubra todo el botón */
+    height: 300%;
+    background: linear-gradient(
+        65deg,
+        transparent 25%,
+        #7285c3 25%,
+        #7285c3 45%,
+        transparent 45%,
+        transparent 55%,
+        #7285c3 55%,
+        #7285c3 75%,
+        transparent 75%
+    );
+    visibility: hidden; /* De primeras se mantiene oculto */
+    z-index: 1;
+    animation: stripes-animation 1s linear forwards; /* Animación de desplazamiento */
+    animation-delay: 1.8s; /* Retraso de 1 segundo después de la animación del salto */
+}
+
+/* Ajuste del contenido del botón */
+.mic-button svg {
+    position: relative;
+    z-index: 2; /* Mantiene el ícono visible sobre las rayas */
+}
+
+/* Animación de movimiento de las rayas */
+@keyframes stripes-animation {
+    0% {
+        transform: translateX(-100%); /* Empieza fuera de la vista a la izquierda */
+        visibility: visible; /* Se hace visible al empezar la animacion*/
+    }
+    100% {
+        transform: translateX(100%); /* Desplaza las rayas hacia la derecha, fuera del botón */
+        visibility: hidden; /* Se oculta al finalizar la animacion*/
+    }
+}
+
 
 
 /* Ajustes para notch y elementos del sistema */
