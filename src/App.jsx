@@ -4,6 +4,7 @@ import { Home } from './pages/Home';
 import { Simulator } from './pages/Simulator';
 import Base_Template from './components/base_template';
 import AboutEntona from './pages/About';
+import Gallery from './pages/Gallery';
 
 export function App() {
     return (
@@ -13,6 +14,7 @@ export function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/simulator" element={<Simulator />} />
                     <Route path="/about" element={<AboutEntona />} />
+                    <Route path="/gallery" element={<Gallery />} />
                 </Routes>
             </Base_Template>
         </Router>

@@ -36,7 +36,7 @@ export function NavBar({ isOpen, onToggle }) {
                     <ul className="nav-links">
                         <li><a href="/about">¿Qué es entona?</a></li>
                         <li><a href="#practice">Buenas prácticas</a></li>
-                        <li><a href="#gallery">Galería</a></li>
+                        <li><a href="/gallery">Galería</a></li>
                     </ul>
 
                     {/* Botones */}
