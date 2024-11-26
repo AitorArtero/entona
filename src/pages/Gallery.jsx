@@ -67,7 +67,7 @@ const Gallery = () => {
                 preload="metadata"
                 poster="/placeholder-thumbnail2.jpg"
               >
-                <source src="/../public/videos/video2.mp4" type="video/mp4" />
+                <source src="/../videos/video2.mp4" type="video/mp4" />
                 Tu navegador no soporta el elemento de video.
               </video>
             </div>
@@ -82,7 +82,7 @@ const Gallery = () => {
                 preload="metadata"
                 poster="/placeholder-thumbnail3.jpg"
               >
-                <source src="/../public/videos/video3.mp4" type="video/mp4" />
+                <source src="/../videos/video3.mp4" type="video/mp4" />
                 Tu navegador no soporta el elemento de video.
               </video>
             </div>

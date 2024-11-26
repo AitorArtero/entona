@@ -9,11 +9,11 @@
 /* Sección del logo */
 .logo-section {
     text-align: center;
-    margin-bottom: 60px;
 }
 
 h1 {
-    margin-bottom: 20px;
+    margin-top: 80px;
+    margin-bottom: 10px;
 }
 
 .tagline {
