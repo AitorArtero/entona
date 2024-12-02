@@ -1,0 +1,345 @@
+.simulator-container {
+    padding: clamp(20px, 5vw, 40px) clamp(16px, 4vw, 20px);
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(20px, 5vh, 35px);
+    position: relative;
+}
+
+/* Main title styles */
+.main-title {
+    margin-top: clamp(40px, 8vh, 60px);
+    font-size: clamp(1.875rem, 6vw, 2.625rem);
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+.title-entona {
+    color: #7285c3;
+}
+
+.title-simulator {
+    color: white;
+}
+
+/* Estilos para los botones de audífono */
+.headphone-toggle {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 4px;
+    border-radius: 25px;
+    display: flex;
+    gap: 4px;
+    width: min(100%, 300px);
+}
+
+.toggle-button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    min-height: 44px;
+}
+
+.toggle-button.active {
+    background-color: white;
+    color: #7285c3;
+}
+
+/* Estilos para el selector de nivel de audición */
+.hearing-level-container {
+    width: min(90%, 400px);
+    padding: 20px 0;
+}
+
+.hearing-level-slider {
+    width: 100%;
+    height: 12px;
+    background: rgba(114, 133, 195, 0.2);
+    border-radius: 20px;
+    -webkit-appearance: none;
+    appearance: none;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+.hearing-level-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background-color: #7285c3;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+.hearing-level-slider::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    background-color: #7285c3;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: none;
+}
+
+.hearing-level-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: clamp(0.875rem, 3vw, 1rem);
+    padding: 0 12px;
+}
+
+.hearing-level-labels span {
+    transition: all 0.2s ease;
+    transform-origin: center;
+    text-align: center;
+}
+
+.hearing-level-labels span.active {
+    color: white;
+    font-weight: 500;
+    transform: scale(1.2);
+}
+
+/* Estilos para el botón de micrófono */
+.mic-button {
+    width: clamp(150px, 40vw, 200px);
+    height: clamp(150px, 40vw, 200px);
+    border-radius: 50%;
+    background-color: white;
+    border: 6px solid #7285c3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    transition: all 0.2s ease;
+    touch-action: manipulation;
+    margin-bottom: 70px;
+}
+
+.mic-button svg {
+    width: 70%;
+    height: 70%;
+    stroke: #7285c3;
+    transition: all 0.2s ease;
+}
+
+.mic-button.recording {
+    background-color: #7285c3;
+    border-color: white;
+}
+
+.mic-button.recording svg {
+    stroke: white;
+}
+
+/* Estilos para el texto informativo */
+.info-text-container {
+    position: absolute;
+    bottom: max(16px, env(safe-area-inset-bottom));
+    left: 16px;
+    right: 16px;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.info-text {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 12px 16px;
+    border-radius: 30px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: white;
+    font-size: clamp(0.8125rem, 3vw, 0.9375rem);
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: min(100%, 400px);
+    text-align: center;
+}
+
+.info-text svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    flex-shrink: 0;
+}
+
+/* ANIMACIONES */
+/* Animaciones para los tres componentes con saltitos fluidos */
+
+/* Definimos la animación del "saltito" */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Posición inicial y final */
+    }
+    50% {
+        transform: translateY(-20px); /* Salto hacia arriba */
+    }
+}
+
+/* Configuración del orden de los saltos */
+
+/* Botón de audífono (arriba) */
+.headphone-toggle {
+    animation: bounce 0.8s ease-in-out; /* Aplica el salto */
+    animation-delay: 0s; /* Sin retraso para el primero */
+    animation-fill-mode: forwards; /* Mantiene la posición al terminar */
+}
+
+/* Barra deslizante (medio) */
+.hearing-level-container {
+    animation: bounce 0.8s ease-in-out; /* Aplica el salto */
+    animation-delay: 0.4s; /* Retraso para iniciar después del anterior */
+    animation-fill-mode: forwards; /* Mantiene la posición al terminar */
+}
+
+/* Botón de micrófono (abajo) */
+.mic-button {
+    background-color: white; /* Fondo blanco */
+    border: 6px solid #7285c3; /* Azul oscuro */
+    position: relative;
+    overflow: hidden;
+    animation: bounce 0.8s ease-in-out; /* Aplica el salto */
+    animation-delay: 0.8s; /* Retraso para iniciar después del anterior */
+    animation-fill-mode: forwards; /* Mantiene la posición al terminar */
+}
+
+/* Animación de rayas diagonales en el botón del micrófono */
+
+/* Pseudoelemento para las rayas diagonales */
+.mic-button::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%; /* Comienza fuera del botón a la izquierda */
+    width: 300%; /* Asegura que el gradiente cubra todo el botón */
+    height: 300%;
+    background: linear-gradient(
+        65deg,
+        transparent 25%,
+        #7285c3 25%,
+        #7285c3 45%,
+        transparent 45%,
+        transparent 55%,
+        #7285c3 55%,
+        #7285c3 75%,
+        transparent 75%
+    );
+    visibility: hidden; /* De primeras se mantiene oculto */
+    z-index: 1;
+    animation: stripes-animation 1s linear forwards; /* Animación de desplazamiento */
+    animation-delay: 1.8s; /* Retraso de 1 segundo después de la animación del salto */
+}
+
+/* Ajuste del contenido del botón */
+.mic-button svg {
+    position: relative;
+    z-index: 2; /* Mantiene el ícono visible sobre las rayas */
+}
+
+/* Animación de movimiento de las rayas */
+@keyframes stripes-animation {
+    0% {
+        transform: translateX(-100%); /* Empieza fuera de la vista a la izquierda */
+        visibility: visible; /* Se hace visible al empezar la animacion*/
+    }
+    100% {
+        transform: translateX(100%); /* Desplaza las rayas hacia la derecha, fuera del botón */
+        visibility: hidden; /* Se oculta al finalizar la animacion*/
+    }
+}
+
+
+
+/* Ajustes para notch y elementos del sistema */
+@supports (padding: max(0px)) {
+    .simulator-container {
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
+        padding-top: max(20px, env(safe-area-inset-top));
+        padding-bottom: max(20px, env(safe-area-inset-bottom));
+    }
+}
+
+/* Small devices (480px and up) */
+@media (min-width: 480px) {
+    .simulator-container {
+        padding: 20px;
+        gap: 24px;
+    }
+
+    .main-title {
+        margin-top: 40px;
+        font-size: 1.875rem;
+    }
+
+    .mic-button {
+        width: 150px;
+        height: 150px;
+    }
+
+    .info-text {
+        font-size: 0.875rem;
+    }
+}
+
+/* Medium devices (768px and up) */
+@media (min-width: 768px) {
+    .simulator-container {
+        padding: 30px;
+        gap: 32px;
+    }
+
+    .main-title {
+        font-size: 2.25rem;
+    }
+
+    .mic-button {
+        width: 180px;
+        height: 180px;
+    }
+
+    .headphone-toggle {
+        width: 280px;
+    }
+}
+
+/* Large devices (1024px and up) */
+@media (min-width: 1024px) {
+    .simulator-container {
+        padding: 40px;
+    }
+
+    .main-title {
+        font-size: 2.625rem;
+    }
+
+    .mic-button {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hearing-level-container {
+        width: 400px;
+    }
+}

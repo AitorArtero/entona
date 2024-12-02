@@ -1,0 +1,153 @@
+/* Reset y estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-size: 16px;
+    height: -webkit-fill-available;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #a5b4e3;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    color: #fff;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* App title styles */
+.app-title {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: clamp(1rem, 4vw, 1.25rem);
+    font-weight: bold;
+    color: white;
+}
+
+/* Botones reutilizables con mejoras táctiles */
+button {
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    touch-action: manipulation;
+    min-height: 44px; /* Mínimo recomendado para elementos táctiles */
+    min-width: 44px;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Asegura que los botones sean fáciles de tocar */
+.button {
+    padding: 12px 24px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Quicksand', sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+}
+
+/* Botón primario reutilizable */
+.primary-button {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 20px;
+    color: #a5b4e3;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    min-height: 44px;
+}
+
+/* Tipografía responsive */
+h1 {
+    font-size: clamp(4rem, 5vw, 5rem);
+    font-weight: bold;
+    color: #fff;
+    line-height: 1.2;
+}
+
+p {
+    font-size: clamp(1rem, 4vw, 1.375rem);
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/* Small devices (480px and up) */
+@media (min-width: 480px) {
+    .button, .primary-button {
+        padding: 10px 20px;
+        font-size: 0.9375rem;
+    }
+    
+    .app-title {
+        font-size: 1.125rem;
+    }
+}
+
+/* Medium devices (768px and up) */
+@media (min-width: 768px) {
+    .button, .primary-button {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+    
+    .app-title {
+        font-size: 1.25rem;
+    }
+}
+
+/* Large devices (1024px and up) */
+@media (min-width: 1024px) {
+    .app-title {
+        top: 24px;
+        right: 24px;
+    }
+
+    h1 {
+        font-size: 2.625rem;
+    }
+
+    p {
+        font-size: 1.375rem;
+    }
+}
+
+/* Prevenir zoom no deseado en inputs en iOS */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    select,
+    textarea,
+    input {
+        font-size: 16px;
+    }
+}
+
+/* Mejoras de accesibilidad */
+:focus {
+    outline: none
+}
+
+/* Desactivar efectos hover en dispositivos táctiles */
+@media (hover: hover) {
+    .button:hover,
+    .primary-button:hover {
+        opacity: 0.9;
+    }
+}

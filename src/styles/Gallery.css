@@ -1,0 +1,139 @@
+.gallery-container {
+    padding: 1.5rem;
+    padding-top: 4rem;
+    min-height: 100vh;
+    background-color: #a5b4e3;
+}
+
+.gallery-content {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.gallery-title {
+    margin-bottom: 2rem;
+    font-size: clamp(1.875rem, 5vw, 2.25rem);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.gallery-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.gallery-item {
+    opacity: 0;
+    transform: translateY(20px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1.25rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gallery-item.animate {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.video-container {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.video-container video {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.video-container .youtube-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
+
+.video-title {
+    font-size: clamp(1.125rem, 4vw, 1.25rem);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.video-description {
+    font-size: clamp(0.875rem, 4vw, 1rem);
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Retraso en la animación para cada elemento */
+.gallery-item:nth-child(1) { animation-delay: 0.3s; }
+.gallery-item:nth-child(2) { animation-delay: 0.6s; }
+.gallery-item:nth-child(3) { animation-delay: 0.9s; }
+
+/* Media Queries */
+@media (min-width: 480px) {
+    .gallery-container {
+        padding: 1.25rem;
+        padding-top: 3.5rem;
+    }
+
+    .gallery-content {
+        padding-top: 1.75rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .gallery-container {
+        padding: 1.5rem;
+        padding-top: 4rem;
+    }
+
+    .gallery-content {
+        max-width: 42rem;
+        padding: 2rem 1rem;
+        margin: 0 auto;
+    }
+
+    .gallery-grid {
+        gap: 2.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .gallery-container {
+        padding: 2rem;
+        padding-top: 4.5rem;
+    }
+
+    .gallery-content {
+        max-width: 48rem;
+    }
+
+    .gallery-title {
+        font-size: 2.25rem;
+    }
+
+    .gallery-grid {
+        gap: 3rem;
+    }
+}

@@ -1,0 +1,114 @@
+.about-container {
+    padding: 1.5rem;
+    padding-top: 4rem;
+    min-height: 100vh;
+    background-color: #a5b4e3;
+}
+
+.about-content {
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.about-title {
+    margin-bottom: 2rem;
+    font-size: clamp(1.875rem, 5vw, 2.25rem);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.about-text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.about-paragraph {
+    font-size: clamp(1rem, 4vw, 1.125rem);
+    line-height: 1.6;
+    letter-spacing: 0.015em;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.about-paragraph.animate {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.about-highlight {
+    font-weight: 500;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Retraso en la animación para cada párrafo */
+.about-paragraph:nth-child(1) { animation-delay: 0.3s; }
+.about-paragraph:nth-child(2) { animation-delay: 0.6s; }
+.about-paragraph:nth-child(3) { animation-delay: 0.9s; }
+.about-paragraph:nth-child(4) { animation-delay: 1.2s; }
+
+/* Small devices (480px and up) */
+@media (min-width: 480px) {
+    .about-container {
+        padding: 1.25rem;
+        padding-top: 3.5rem;
+    }
+
+    .about-content {
+        padding-top: 1.75rem;
+    }
+
+    .about-title {
+        font-size: 1.875rem;
+    }
+}
+
+/* Medium devices (768px and up) */
+@media (min-width: 768px) {
+    .about-container {
+        padding: 1.5rem;
+        padding-top: 4rem;
+    }
+
+    .about-content {
+        max-width: 42rem;
+        padding: 2rem 1rem;
+        margin: 0 auto;
+    }
+
+    .about-title {
+        font-size: 2rem;
+    }
+
+    .about-text-container {
+        gap: 1.5rem;
+    }
+}
+
+/* Large devices (1024px and up) */
+@media (min-width: 1024px) {
+    .about-container {
+        padding: 2rem;
+        padding-top: 4.5rem;
+    }
+
+    .about-content {
+        max-width: 48rem;
+    }
+
+    .about-title {
+        font-size: 2.25rem;
+    }
+}
