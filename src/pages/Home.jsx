@@ -27,10 +27,10 @@ export function Home() {
                     </button>
                 </div>
 
-                <div className="cta-section">
+                {/* <div className="cta-section">
                     <p>Si has probado el simulador...</p>
-                    <button className="primary-button">Ponte a prueba</button>
-                </div>
+                     <button className="primary-button">Ponte a prueba</button> 
+                </div> */}
             </div>
     );
 }

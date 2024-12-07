@@ -44,9 +44,9 @@ export function NavBar({ isOpen, onToggle }) {
                         <a href="/simulator" className="primary-button-a">
                             Entona simulator
                         </a>
-                        <a href="/test" className="primary-button-b">
+                        {/* <a href="/test" className="primary-button-b">
                             Ponte a prueba
-                        </a>
+                        </a> */}
                     </div>
                 </div>
             </nav>
