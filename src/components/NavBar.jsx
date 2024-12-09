@@ -35,7 +35,7 @@ export function NavBar({ isOpen, onToggle }) {
                     {/* Enlaces de navegación */}
                     <ul className="nav-links">
                         <li><a href="/about">¿Qué es entona?</a></li>
-                        <li><a href="#practice">Buenas prácticas</a></li>
+                        <li><a href="/good_practices">Buenas prácticas</a></li>
                         <li><a href="/gallery">Galería</a></li>
                     </ul>
 
