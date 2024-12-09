@@ -186,6 +186,17 @@
     background: #a5b4e3;
     border-radius: 4px;
   }
+
+  /* Animation */
+  @keyframes peekNext {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(-120px); }
+  }
+  
+  .cards-slider {
+    animation: peekNext 1.5s ease-in-out;
+    animation-delay: 1s;
+  }
   
   @media (max-width: 480px) {
     .good-practices {
@@ -251,3 +262,5 @@
       text-align: center; /* Ensure center alignment */
     }
   }
+
+  
