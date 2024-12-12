@@ -44,7 +44,7 @@ export function GoodPractices() {
         <div className="card-content">
           <p>Cada persona con diversidad auditiva es única, y sus experiencias varían. Si quieres mejorar tu comunicación, preguntales directamente:</p>
           <div className="image-text-container">
-            <img src="./../../public/images/image1.png" alt="Comunicación inclusiva" />
+            <img src="/images/image1.png" alt="Comunicación inclusiva" />
             <p className="highlighted-text">
               ¿Qué puedo hacer para facilitarte las cosas?<br/><br/>
               Escuchar sus necesidades es el primer paso para apoyarles mejor.
@@ -65,7 +65,7 @@ export function GoodPractices() {
             <h3><span className="card-number pastel-yellow">3</span>No des la espalda</h3>
             <p>Mantén el contacto visual y asegúrate de estar de frente al comunicarte. Esto facilita la lectura de labios y la interpretación de expresiones faciales.</p>
           </div>
-          <img src="./../../public/images/image2.png" alt="Buenas prácticas de comunicación" />
+          <img src="/images/image2.png" alt="Buenas prácticas de comunicación" />
         </div>
       )
     },
@@ -76,7 +76,7 @@ export function GoodPractices() {
       content: (
         <div className="card-content">
           <p>El ruido ambiental puede ser un gran obstáculo. Intenta reducir el ruido de fondo siempre que sea posible, y elige lugares tranquilos para hablar.</p>
-          <img src="./../../public/images/image3.png" alt="Sensibilización auditiva" />
+          <img src="/images/image3.png" alt="Sensibilización auditiva" />
         </div>
       )
     },
