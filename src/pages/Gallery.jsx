@@ -44,50 +44,50 @@ const Gallery = () => {
       {/* Contenido principal */}
       <div className="gallery-content">
         <h1 className="gallery-title">Nuestros clips</h1>
-        
+
         <div className="gallery-grid">
+          
+
           <div className="gallery-item">
             <div className="video-container">
-            <iframe
-                src="https://www.youtube.com/embed/lf-hp0Ohjnw"
-                title="Video de YouTube"
+              <iframe
+                src="https://drive.google.com/file/d/1vQaATi7cFYz91TPYvoMjaMCcU5G6Vgn9/preview"
+                title="Video aula"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="youtube-video"
               ></iframe>
             </div>
-            <h3 className="video-title">Conversación en cafetería</h3>
+            <h3 className="video-title">Clip aula</h3>
+            <p className="video-description">Simulación de un día cualquiera de universidad desde la perspectiva de una persona que utiliza audífonos.</p>
+          </div>
+
+          <div className="gallery-item">
+            <div className="video-container">
+              <iframe
+                src="https://drive.google.com/file/d/1PZEQ1gqApXMvgUpzxsnKLTMqzHxlribJ/preview"
+                title="Ruido ambiente excesivo"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="youtube-video"
+              ></iframe>
+            </div>
+            <h3 className="video-title">Ruido ambiente excesivo</h3>
+            <p className="video-description">Cómo se percibe un ambiente excesivamemte ruidoso para una persona que utiliza audífonos.</p>
+          </div>
+          
+          <div className="gallery-item">
+            <div className="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/lf-hp0Ohjnw"
+                title="Video Gregorio Ybarra"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="youtube-video"
+              ></iframe>
+            </div>
+            <h3 className="video-title">Video Gregorio Ybarra</h3>
             <p className="video-description">Experiencia de una persona con pérdida auditiva moderada en un ambiente ruidoso.</p>
-          </div>
-
-          <div className="gallery-item">
-            <div className="video-container">
-              <video 
-                controls 
-                preload="metadata"
-                poster="/placeholder-thumbnail2.jpg"
-              >
-                <source src="/../videos/video2.mp4" type="video/mp4" />
-                Tu navegador no soporta el elemento de video.
-              </video>
-            </div>
-            <h3 className="video-title">Reunión familiar</h3>
-            <p className="video-description">Simulación de una comida familiar desde la perspectiva de alguien con audífono.</p>
-          </div>
-
-          <div className="gallery-item">
-            <div className="video-container">
-              <video 
-                controls 
-                preload="metadata"
-                poster="/placeholder-thumbnail3.jpg"
-              >
-                <source src="/../videos/video3.mp4" type="video/mp4" />
-                Tu navegador no soporta el elemento de video.
-              </video>
-            </div>
-            <h3 className="video-title">Clase virtual</h3>
-            <p className="video-description">Cómo se percibe una videollamada con pérdida auditiva severa.</p>
           </div>
         </div>
       </div>
