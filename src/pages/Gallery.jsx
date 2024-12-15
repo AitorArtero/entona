@@ -51,7 +51,7 @@ const Gallery = () => {
           <div className="gallery-item">
             <div className="video-container">
               <iframe
-                src="https://drive.google.com/file/d/1vQaATi7cFYz91TPYvoMjaMCcU5G6Vgn9/preview"
+                src="https://drive.google.com/file/d/1dm7RukVkLrpbv2_xsYi_C-C1H5b8v01-/preview"
                 title="Video aula"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -65,7 +65,7 @@ const Gallery = () => {
           <div className="gallery-item">
             <div className="video-container">
               <iframe
-                src="https://drive.google.com/file/d/1PZEQ1gqApXMvgUpzxsnKLTMqzHxlribJ/preview"
+                src="https://drive.google.com/file/d/1v8QnOtBNEVqqalPCxXibO9C4uRZ_ictp/preview"
                 title="Ruido ambiente excesivo"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -87,7 +87,7 @@ const Gallery = () => {
               ></iframe>
             </div>
             <h3 className="video-title">Video Gregorio Ybarra</h3>
-            <p className="video-description">Experiencia de una persona con pérdida auditiva moderada en un ambiente ruidoso.</p>
+            <p className="video-description">SINERGIA. Proyecto generacional. II edicion. Asociación Gregorio Ybarra.</p>
           </div>
         </div>
       </div>
